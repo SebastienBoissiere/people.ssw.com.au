@@ -171,6 +171,7 @@ const YoutubePlaylist = ({ youtubePlayListId }) => {
                   (items.length <= numVideosDesktop ? 'xl:hidden ' : '') +
                   (showButtons ? 'show-button' : 'hide-button')}`}
               >
+                
                 <button
                   className="BrainhubCarousel__arrows BrainhubCarousel__arrowLeft"
                   onClick={previousSlide}
