@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import posed from 'react-pose';
 import CompanyLogo from '-!svg-react-loader!../../images/branding/Logo.svg';
-
-import CountrySelect from '../country-select/country-select';
+import GitHubIcon from '-!svg-react-loader!../../images/github.svg';
+import InfoIcon from '-!svg-react-loader!../../images/info.svg';
 import { parentSiteUrl } from '../../../site-config';
 
 // Example of a component-specific page transition
