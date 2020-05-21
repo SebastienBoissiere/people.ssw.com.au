@@ -4,6 +4,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+
 module.exports = {
   pathPrefix: `/people${
     process.env.CHINA_BUILD && process.env.CHINA_BUILD === 'TRUE' ? '-cn' : ''
