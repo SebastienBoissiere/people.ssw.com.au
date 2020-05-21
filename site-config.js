@@ -2,31 +2,22 @@
 const path = require(`path`);
 
 module.exports = {
-  companyName: `SSW Consulting`,
-  companyShortName: `SSW`,
-  siteTitle: `SSW.People | Australia's Leading .NET and Azure Consultants`,
-  siteTitleShort: `SSW.People | Australia's Leading .NET and Azure Consultants`,
+  companyName: `Microsoft`,
+  companyShortName: `Microsoft`,
+  siteTitle: `Microsoft | Do what you love Create the future you want`,
+  siteTitleShort: `Microsoft | Do what you love Create the future you want`,
   siteDescription:
     `We work together to form an amazing collective brain - SSW is made up of a great team of staff that are passionate about technology and how it meets business needs!` +
     `We're enthusiastic and have a "Make it happen" culture.`,
-  siteUrl: `https://ssw.com.au`,
+  siteUrl: `https://microsoft.ssw.com.au`,
   themeColor: `#cc4141`,
   backgroundColor: `#fff`,
   pathPrefix: null,
   logo: path.resolve(__dirname, `src/images/branding/icon.png`),
   social: {
-    twitter: `SSW_TV`,
+    twitter: `microsoft`,
     fbAppId: `120920301257947`,
-    fbPage: `https://www.facebook.com/SSW.page`,
+    fbPage: `https://www.facebook.com/Microsoft`,
   },
-  parentSiteUrl: `https://ssw.com.au`,
-  locationsListForOrdering: [`Sydney`, `Melbourne`, `Brisbane`],
-  roleListOrdering: [
-    `Managers`,
-    `Developers`,
-    `Designers`,
-    `Marketing & Video`,
-    `Admin`,
-  ],
-  profilesRepo: `https://github.com/SSWConsulting/SSW.People.Profiles`,
+  parentSiteUrl: `https://www.microsoft.com.au`,
 };
