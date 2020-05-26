@@ -102,7 +102,7 @@ const Index = ({ data }) => {
     setFilteredPeople(people);
   }, [selectedLocation, selectedSkills, selectedEvents]);
 
-  
+
   return (
     <>
       <div
@@ -117,21 +117,26 @@ const Index = ({ data }) => {
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
         />
-      </div>
-      <div className="mx-2 md:mx-6 flex flex-col lg:flex-row">
-        <div className="lg:w-1/4">
-          <div className="mx-auto flex flex-col sm:flex-row lg:flex-col lg:w-5/6">
-            <div className="w-full sm:w-1/2 lg:w-full">
-              <RoleFilter
-                allRoles={allRoles}
-                selectedRoles={selectedRoles}
-                onRoleChange={setSelectedRoles}
-                filteredPeople={filteredPeople}
-              />
-            </div>
-            {process.env.EVENTS_API && process.env.EVENTS_API.length > 4 && (
-              <div className="w-full sm:w-1/2 lg:w-full mt-0 lg:mt-4">
-                <EventFilter
+        <div className="my-8 mx-0 xl:mx-6">
+          <LocationFilter
+            locations={allLocations}
+            selectedLocation={selectedLocation}
+            onLocationChange={setSelectedLocation}
+          />
+        </div>
+        <div className="mx-6 flex flex-col lg:flex-row">
+          <div className="lg:w-1/4">
+            <div className="mx-auto flex flex-col sm:flex-row lg:flex-col lg:w-5/6">
+              <div className="w-full sm:w-1/2 lg:w-full">
+                <RoleFilter
+                  allRoles={allRoles}
+                  selectedRoles={selectedRoles}
+                  onRoleChange={setSelectedRoles}
+                  filteredPeople={filteredPeople}
+                />
+              </div>
+           {process.env.EVENTS_API && process.env.EVENTS_API.length>5 && <div className="w-full sm:w-1/2 lg:w-full mt-0 lg:mt-4">
+               <EventFilter
                   allEvents={events}
                   allEventsType={allEventsType}
                   selectedEvents={selectedEvents}
@@ -139,7 +144,7 @@ const Index = ({ data }) => {
                   filteredPeople={filteredPeople}
                 />
               </div>
-            )}
+            }
             <div className="w-full sm:w-1/2 lg:w-full mt-0 lg:mt-4">
               <SkillsFilter
                 allSkills={allSkills}
