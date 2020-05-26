@@ -102,6 +102,7 @@ const Index = ({ data }) => {
     setFilteredPeople(people);
   }, [selectedLocation, selectedSkills, selectedEvents]);
 
+  
   return (
     <>
       <div
