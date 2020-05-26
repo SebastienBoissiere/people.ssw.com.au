@@ -51,7 +51,6 @@ exports.sourceNodes = async ({ actions }) => {
         : {
             Authorization: process.env.DATA_API_AUTHORIZATION,
           };
-
     crmDataResult = await axios({
       method: 'get',
       url: process.env.DATA_API_URL,
