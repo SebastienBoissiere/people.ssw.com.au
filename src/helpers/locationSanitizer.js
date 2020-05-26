@@ -11,5 +11,4 @@ const LocationSanitiser = value => {
     return 'Others';
   }
 };
-
 export default LocationSanitiser;
