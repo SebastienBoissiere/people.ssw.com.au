@@ -1101,6 +1101,12 @@ font-size: 0.8rem;
 
 .download-image{
   border-bottom: none !important;
+.logo::before {
+  content: '\2006';
+  position: absolute;
+  left: -1.7em;
+  height: 0.095em;
+  background: url(./images/branding/Logo.jpg) no-repeat;
 }
 
 
