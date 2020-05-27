@@ -1,40 +1,62 @@
 {
     "menuItems": [
         {
-            "text": "Services",
-            "groupImageUrl": "Menu-Banner-Services.png",
-            "children": []
-        },
-        {
-            "text": "Products",
-            "groupImageUrl": "Menu-Banner-Products.png",
-            "children": []
-        },
-        {
-            "text": "Training",
-            "groupImageUrl": "Menu-Banner-Training.png",
-            "children": []
-        },
-        {
-            "text": "User Group",
-            "groupImageUrl": "Menu-Banner-UserGroup.png",
-            "children": []
-        },
-        {
-            "text": "Rules",
-            "groupImageUrl": "Menu-Banner-Standards.png",
-            "children": []
+            "text": "Our services", 
+            "groupImageUrl": "empty.png",      
+            "children": [
+                {
+                    "text": "All Services",
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "navigateUrlOnMobileOnly": true,
+                    "children": [
+                        {
+                            "text": "See All Services",
+                            "navigateUrl": "https://www.dummy-menu.blabla"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "text": "About Us",
-            "groupImageUrl": "Menu-Banner-AboutUs.png",
-            "children": []
-        },
-        {
-            "text": "SSW TV",
-            "cssClass": "ignore no-dropdown menu-ssw-tv",
-            "navigateUrl": "http://tv.ssw.com",
-            "target": "_blank"
+            "groupImageUrl": "empty.png",
+            "children": [
+                {
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "text": "About Us"
+                },           
+                {
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "text": "Our Culture"
+                },
+                {
+                    "navigateUrl": "https://northwind.ssw.com.au/",
+                    "text": "Our People"
+                },
+                {
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "text": "Our Clients",
+                    "children": [
+                        {
+                            "navigateUrl": "https://www.dummy-menu.blabla",
+                            "text": "Testimonials"
+                        }
+                    ]
+                },
+                {
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "text": "Our History",
+                    "breakListBefore": true
+                },
+                {
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "text": "Our Offices"
+                },               
+                {
+                    "navigateUrl": "https://www.dummy-menu.blabla",
+                    "text": "Contact Us"
+                }
+            ]
         }
     ]
 }
