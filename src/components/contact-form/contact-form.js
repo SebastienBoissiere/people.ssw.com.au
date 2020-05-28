@@ -15,7 +15,6 @@ const ContactForm = ({ onClose }) => {
   const [contactFormState, setContactFormState] = useState('');
   const [contactFormStateText, setContactFormStateText] = useState('');
   const [contactReCaptcha, setContactReCaptcha] = useState('');
-
   const handleSubmit = async event => {
     let subject =
       'Consulting enquiry - ' +
