@@ -21,9 +21,7 @@ module.exports = {
       options: {
         name: 'people',
         remote: `${siteConfig.profilesRepo}.git`,
-        // Optionally supply a branch. If none supplied, you'll get the default branch.
         branch: 'master',
-        // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: '*-*/**',
       },
     },
@@ -32,9 +30,7 @@ module.exports = {
       options: {
         name: 'people',
         remote: `${siteConfig.profilesRepo}.git`,
-        // Optionally supply a branch. If none supplied, you'll get the default branch.
         branch: 'master',
-        // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: 'badges/**',
       },
     },
