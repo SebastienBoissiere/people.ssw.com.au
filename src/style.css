@@ -1101,6 +1101,8 @@ font-size: 0.8rem;
 
 .download-image{
   border-bottom: none !important;
+}
+
 .logo::before {
   content: '\2006';
   position: absolute;

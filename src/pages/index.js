@@ -101,8 +101,6 @@ const Index = ({ data }) => {
 
     setFilteredPeople(people);
   }, [selectedLocation, selectedSkills, selectedEvents]);
-
-
   return (
     <>
       <div
@@ -117,12 +115,6 @@ const Index = ({ data }) => {
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
         />
-        <div className="my-8 mx-0 xl:mx-6">
-          <LocationFilter
-            locations={allLocations}
-            selectedLocation={selectedLocation}
-            onLocationChange={setSelectedLocation}
-          />
         </div>
         <div className="mx-6 flex flex-col lg:flex-row">
           <div className="lg:w-1/4">
