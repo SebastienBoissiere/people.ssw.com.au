@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import posed from 'react-pose';
 //import Logo from '-!svg-react-loader!../../images/branding/Logo.svg';
 import Logo from '../../images/branding/Logo.jpg';
-import GitHubIcon from '-!svg-react-loader!../../images/github.svg';
-import InfoIcon from '-!svg-react-loader!../../images/info.svg';
 import { parentSiteUrl, companyName } from '../../../site-config';
 
 // Example of a component-specific page transition
@@ -43,7 +41,6 @@ const Header = () => {
             </h1>
           </div>
           <div className="action-btn-container print-hidden">
-            <CountrySelect />
           </div>
         </div>
       </header>
