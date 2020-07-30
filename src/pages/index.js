@@ -115,27 +115,27 @@ const Index = ({ data }) => {
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
         />
-        </div>
-        <div className="mx-6 flex flex-col lg:flex-row">
-          <div className="lg:w-1/4">
-            <div className="mx-auto flex flex-col sm:flex-row lg:flex-col lg:w-5/6">
-              <div className="w-full sm:w-1/2 lg:w-full">
-                <RoleFilter
-                  allRoles={allRoles}
-                  selectedRoles={selectedRoles}
-                  onRoleChange={setSelectedRoles}
-                  filteredPeople={filteredPeople}
-                />
-              </div>
-           {process.env.EVENTS_API && process.env.EVENTS_API.length>5 && <div className="w-full sm:w-1/2 lg:w-full mt-0 lg:mt-4">
-               <EventFilter
-                  allEvents={events}
-                  allEventsType={allEventsType}
-                  selectedEvents={selectedEvents}
-                  onEventChange={setSelectedEvents}
-                  filteredPeople={filteredPeople}
-                />
-              </div>
+      </div>
+      <div className="mx-6 flex flex-col lg:flex-row">
+        <div className="lg:w-1/4">
+          <div className="mx-auto flex flex-col sm:flex-row lg:flex-col lg:w-5/6">
+            <div className="w-full sm:w-1/2 lg:w-full">
+              <RoleFilter
+                allRoles={allRoles}
+                selectedRoles={selectedRoles}
+                onRoleChange={setSelectedRoles}
+                filteredPeople={filteredPeople}
+              />
+            </div>
+            {process.env.EVENTS_API && process.env.EVENTS_API.length > 5 && <div className="w-full sm:w-1/2 lg:w-full mt-0 lg:mt-4">
+              <EventFilter
+                allEvents={events}
+                allEventsType={allEventsType}
+                selectedEvents={selectedEvents}
+                onEventChange={setSelectedEvents}
+                filteredPeople={filteredPeople}
+              />
+            </div>
             }
             <div className="w-full sm:w-1/2 lg:w-full mt-0 lg:mt-4">
               <SkillsFilter
@@ -171,16 +171,16 @@ function buildPeople(data) {
   const sketchProfileImageMap = new Map();
   const audioMap = new Map();
 
-  data.profile_images.nodes.forEach(n =>
+  data.profile_images && data.profile_images.nodes.forEach(n =>
     profileImageMap.set(n.name.replace('-Profile', ''), n.childImageSharp.fixed)
   );
-  data.sketch_profile_images.nodes.forEach(n =>
+  data.sketch_profile_images && data.sketch_profile_images.nodes.forEach(n =>
     sketchProfileImageMap.set(
       n.name.replace('-Sketch', ''),
       n.childImageSharp.fixed
     )
   );
-  data.profile_audios.nodes.forEach(n =>
+  data.profile_audios && data.profile_audios.nodes.forEach(n =>
     audioMap.set(n.name.replace('-Audio', ''), n.publicURL)
   );
 
@@ -214,9 +214,9 @@ function buildPeople(data) {
           profileAudio: audioMap.get(node.parent.name),
           skills: !isFixedTile
             ? [
-                dataCRM.skills.advancedSkills,
-                dataCRM.skills.intermediateSkills,
-              ].flat()
+              dataCRM.skills.advancedSkills,
+              dataCRM.skills.intermediateSkills,
+            ].flat()
             : [],
           sanitisedNickname: !isFixedTile
             ? dataCRM.nickname.replace(/\s+/g, '-')
@@ -335,7 +335,7 @@ const IndexWithQuery = props => (
       <Location>
         {({ location }) => (
           <Index
-            {...data.HomepageQuery}
+            data={data}
             {...props}
             search={location.search ? queryString.parse(location.search) : {}}
           />
