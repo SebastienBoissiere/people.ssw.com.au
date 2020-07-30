@@ -20,4 +20,12 @@ module.exports = {
     fbPage: `https://www.facebook.com/Northwind-sample`,
   },
   parentSiteUrl: `https://www.northwind-sample.com.au`,
+  locationsListForOrdering: ['All', 'Seattle', 'London', 'Others'],
+  roleListOrdering: [
+    'Vice President',
+    'Sales Manager',
+    'Sales Representatives',
+    'Developers',
+  ],
+  profilesRepo: `https://github.com/SSWConsulting/Northwind.People`,
 };
